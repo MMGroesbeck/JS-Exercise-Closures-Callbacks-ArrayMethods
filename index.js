@@ -158,16 +158,16 @@ function processContains(item, list, cb) {
  * should return 3.
 */
 function processDuplicateFree(list, cb) {
-  const dupeFree = [];
-  list.forEach(item => {
-    if (!dupeFree.includes(item)){
-      dupeFree.push(item);
-    }
-  })
-  return cb(dupeFree);
-  // return cb(list.filter(function(item, index){
-  //   return !list.slice(index).includes(item, index);
-  // }));
+  // const dupeFree = [];
+  // list.forEach(item => {
+  //   if (!dupeFree.includes(item)){
+  //     dupeFree.push(item);
+  //   }
+  // })
+  // return cb(dupeFree);
+  return cb(list.filter(function(item, index){
+    return !list.slice(index+1).includes(item);
+  }));
 }
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
