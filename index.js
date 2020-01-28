@@ -164,7 +164,7 @@ function processDuplicateFree(list, cb) {
       dupeFree.push(item);
     }
   })
-  return dupeFree;
+  return cb(dupeFree);
 }
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
