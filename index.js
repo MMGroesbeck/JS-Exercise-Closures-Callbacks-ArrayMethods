@@ -165,6 +165,9 @@ function processDuplicateFree(list, cb) {
     }
   })
   return cb(dupeFree);
+  // return cb(list.filter(function(item, index){
+  //   return !list.slice(index).includes(item, index);
+  // }));
 }
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
